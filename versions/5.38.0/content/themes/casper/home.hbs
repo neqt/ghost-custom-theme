@@ -1,0 +1,53 @@
+{{!< default}}
+
+{{#is 'home'}}
+  <div class='slideshow-container'>
+    <div class='mySlides fade'>
+      <img
+        src='https://media.discordapp.net/attachments/1081611844629835828/1086240568927072336/TF_SCALE_2022.jpg'
+        alt='Slide 1'
+        style='width:100%'
+      />
+    </div>
+
+    <div class='mySlides fade'>
+      <img
+        src='https://media.discordapp.net/attachments/1081611844629835828/1086240568448913460/TF_SCALE_2022_1.jpg'
+        alt='Slide 2'
+        style='width:100%'
+      />
+    </div>
+
+    <div class='mySlides fade'>
+      <img
+        src='https://cdn.discordapp.com/attachments/1081611844629835828/1086240568692199434/TF_SCALE_2022_2.jpg'
+        alt='Slide 3'
+        style='width:100%'
+      />
+    </div>
+
+    <a class='prev' onclick='plusSlides(-1)'>&#10094;</a>
+    <a class='next' onclick='plusSlides(1)'>&#10095;</a>
+  </div>
+
+  <style>
+    .slideshow-container { position: relative; margin: auto; max-width: 100%; }
+    .mySlides { display: none; } .prev, .next { position: absolute; top: 50%;
+    width: auto; margin-top: -22px; padding: 16px; color: #fff; font-weight:
+    bold; font-size: 18px; transition: 0.6s ease; border-radius: 0 3px 3px 0;
+    cursor: pointer; z-index: 1; } .next { right: 0; border-radius: 3px 0 0 3px;
+    } .prev:hover, .next:hover { background-color: rgba(0, 0, 0, 0.8); } .fade {
+    animation-name: fade; animation-duration: 1.5s; } @keyframes fade { from {
+    opacity: 0.4; } to { opacity: 1; } }
+  </style>
+
+  <script>
+    var slideIndex = 1; showSlides(slideIndex); function plusSlides(n) {
+    showSlides(slideIndex += n); } function showSlides(n) { var i; var slides =
+    document.getElementsByClassName("mySlides"); if (n > slides.length)
+    {slideIndex = 1} if (n < 1) {slideIndex = slides.length} for (i = 0; i <
+    slides.length; i++) { slides[i].style.display = "none"; }
+    slides[slideIndex-1].style.display = "block"; }
+  </script>
+
+{{/is}}
